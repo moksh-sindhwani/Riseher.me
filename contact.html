@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      
+    />
+<link rel="shortcut icon" href="Screenshot 2025-05-19 145755 (1).ico" type="image/x-icon">
+    <style>
+      .contact-us {
+        width: 80%;
+        margin: 40px auto;
+        display: flex;
+        justify-content: center;
+      }
+
+      .row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .contact-col {
+        flex-basis: 50%;
+        min-width: 300px;
+      }
+
+      /* Make form inputs and textarea full width */
+      .contact-col form input,
+      .contact-col form textarea,
+      .contact-col form select {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 17px;
+        outline: none;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-family: inherit;
+      }
+
+      /* Style for interests section */
+      .interests-section {
+        border: 1px solid #ccc;
+        padding: 12px 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+
+      .interests-section legend {
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .interests-section label {
+        display: inline-block;
+        margin-right: 15px;
+        font-weight: 400;
+        color: #555;
+        cursor: pointer;
+      }
+
+      .interests-section input[type="checkbox"] {
+        margin-right: 6px;
+      }
+
+      /* Label for How You Can Help textarea */
+      .contact-col form label[for="help"] {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <img src="download (1).png" alt="eduford" />
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="contact.html">VOLUNTEER</a></li>
+            <li>
+              <a
+                href="https://chat.whatsapp.com/GAtEzt8fR6Y33W5w3O7uSb"
+                target="_blank"
+                class="whatsapp-join"
+              >
+                <i class="fab fa-whatsapp"></i> Join
+              </a>
+            </li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>APPLY TO VOLUNTEER</h1>
+    </section>
+
+    <!---------------Contact us page-------------->
+    <section class="location">
+      <section class="contact-us">
+        <div class="row">
+          <div class="contact-col">
+           
+            <form action="https://formspree.io/f/xvgayzad" method="POST">
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your Name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your Email"
+                required
+              />
+              <input
+                type="text"
+                name="subject"
+                placeholder="Enter your Subject"
+                required
+              />
+
+              <!-- How You Can Help Section -->
+              <label for="help">How You Can Help</label>
+              <textarea
+                id="help"
+                name="help"
+                rows="5"
+                placeholder="Describe how you can contribute or help us"
+              ></textarea>
+
+              <textarea
+                name="message"
+                rows="8"
+                placeholder="Message"
+              ></textarea>
+              <button type="submit" class="hero-btn red-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!---------------Footer-------------->
+     <footer>
+      <h4>About Us</h4>
+      <p>RiseHer is more than just a movement—it’s a revolution in empowerment, strength, and solidarity. We are committed to breaking barriers, fostering confidence, and creating opportunities for women to lead, thrive, and inspire change.</p>
+      <div class="icons">
+        <a href="https://www.youtube.com/@RiseHer-Moksh" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.instagram.com/riseher01/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <p>Made with <i class="fa-regular fa-heart"></i> by Moksh</p>
+    </footer>
+
+    <!-- -------------Javascript for Toggle Menu----------- -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
